@@ -1565,6 +1565,10 @@ footer a:hover {
    HERO - FULL BACKGROUND
    ========================= */
 
+/* =========================
+   HERO - FULL BACKGROUND
+   ========================= */
+
 .hero {
     position: relative !important;
     display: flex !important;
@@ -1575,7 +1579,6 @@ footer a:hover {
     padding: 0 !important;
     margin: 0 !important;
 
-    /* ONLY FIXED THIS BACKGROUND LINE */
     background-image: url("./Velvet%20jewellery.png") !important;
     background-size: cover !important;
     background-position: center !important;
