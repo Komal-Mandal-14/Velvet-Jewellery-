@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Velvet | Anti-Tarnish Jewellery</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo"><b>
+            VELVET
+        </b></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#collections">Collections</a>
+            <a href="#bestsellers">Best Sellers</a>
+            <a href="#about">About</a>
+            <a href="#care">Care Guide</a>
+        </nav>
+
+        <div class="nav-icons">
+            <button onclick="openSearch()">⌕</button>
+            <button>♡</button>
+            <button onclick="openCart()">🛒 <span id="cartCount">0</span></button>
+        </div>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                TIMELESS • EVERYDAY • ELEGANT
+            </p>
+
+            <h1>
+                Jewellery That<br>
+                <span>Stays Beautiful.</span>
+            </h1>
+
+            <p class="hero-text">
+                Discover premium anti-tarnish jewellery designed
+                to shine through every moment.
+            </p>
+
+            <a href="#bestsellers" class="primary-btn">
+                SHOP COLLECTION
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <div class="image-placeholder">
+<img src="C:\Users\Komal Mandal\Downloads\Velvet.png" alt = VELVET JEWEllERY">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="features">
+
+        <div class="feature">
+            <div class="feature-icon">✦</div>
+            <h3>Anti-Tarnish</h3>
+            <p>Designed to keep its shine for longer.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">♢</div>
+            <h3>Water Resistant</h3>
+            <p>Made for your everyday lifestyle.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">♡</div>
+            <h3>Skin Friendly</h3>
+            <p>Comfortable and easy to wear.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">∞</div>
+            <h3>Made to Last</h3>
+            <p>Timeless pieces for every occasion.</p>
+        </div>
+
+    </section>
+
+
+    <!-- COLLECTIONS -->
+
+    <section class="collections" id="collections">
+
+        <div class="section-heading">
+
+            <p>EXPLORE</p>
+
+            <h2>
+                Shop By Collection
+            </h2>
+
+        </div>
+
+
+        <div class="collection-grid">
+
+            <div class="collection-card">
+                <div class="collection-image necklace"> 
+<img src="https://i.pinimg.com/736x/56/a5/21/56a521f06eb144e33cac030a098739af.jpg" alt="VELVET Necklaces"></div>
+			
+                <h3>Necklaces</h3>
+              <a href="necklaces.html">Explore →</a>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-image earrings">
+<img src="https://i.pinimg.com/736x/31/49/c3/3149c329d1bebe7198a41c38c8221e55.jpg" alt="VELVET Earrings"></div>
+                <h3>Earrings</h3>
+                <a href="earrings.html">Explore →</a>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-image rings">
+<img src="https://i.pinimg.com/736x/19/a5/37/19a537e50d980c1a389cf54818341b7f.jpg" alt="VELVET Rings"></div>
+                <h3>Rings</h3>
+                <a href="rings.html">Explore →</a>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-image bracelets">
+<img src="https://i.pinimg.com/736x/8f/12/ee/8f12ee95ad58cc916fca099915476bfe.jpg" alt="VELVET Barcelets"></div>
+                <h3>Bracelets</h3>
+               <a href="bracelets.html">Explore →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BEST SELLERS -->
+
+    <section class="products" id="bestsellers">
+
+        <div class="section-heading">
+
+            <p>OUR FAVOURITES</p>
+
+            <h2>
+                Best Sellers
+            </h2>
+
+        </div>
+
+
+        <div class="product-grid" id="productGrid">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <span class="badge">BESTSELLER</span>
+
+                    <button class="wishlist">♡</button>
+
+                    <div class="product-placeholder">
+                        Necklace
+                    </div>
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Classic Gold Chain</h3>
+
+                    <p class="product-category">
+                        Necklace
+                    </p>
+
+                    <div class="price-row">
+
+                        <span>₹899</span>
+
+                        <button onclick="addToCart('Classic Gold Chain', 899)">
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <button class="wishlist">♡</button>
+
+                    <div class="product-placeholder">
+                        Earrings
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Golden Pearl Drops</h3>
+
+                    <p class="product-category">
+                        Earrings
+                    </p>
+
+                    <div class="price-row">
+
+                        <span>₹749</span>
+
+                        <button onclick="addToCart('Golden Pearl Drops', 749)">
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <button class="wishlist">♡</button>
+
+                    <div class="product-placeholder">
+                        Ring
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Minimal Gold Ring</h3>
+
+                    <p class="product-category">
+                        Rings
+                    </p>
+
+                    <div class="price-row">
+
+                        <span>₹599</span>
+
+                        <button onclick="addToCart('Minimal Gold Ring', 599)">
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <button class="wishlist">♡</button>
+
+                    <div class="product-placeholder">
+                        Bracelet
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Classic Gold Bracelet</h3>
+
+                    <p class="product-category">
+                        Bracelet
+                    </p>
+
+                    <div class="price-row">
+
+                        <span>₹799</span>
+
+                        <button onclick="addToCart('Classic Gold Bracelet', 799)">
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BRAND STORY -->
+
+    <section class="story" id="about">
+
+        <div class="story-image">
+            <div class="story-placeholder"><b>
+                VELVET
+            </b></div>
+        </div>
+
+        <div class="story-content">
+
+            <p><b>THE VELVET STORY</b></p>
+
+            <h2>
+                Made for your
+                everyday shine.
+            </h2>
+
+            <p>
+                At VELVET, we believe jewellery should be more
+                than just beautiful. It should be effortless,
+                timeless and made for everyday life.
+            </p>
+
+            <p>
+                Our anti-tarnish pieces are thoughtfully designed
+                for women who want their favourite jewellery to
+                stay beautiful, day after day.
+            </p>
+
+            <button class="secondary-btn">
+                DISCOVER OUR STORY
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CARE GUIDE -->
+
+    <section class="care" id="care">
+
+        <div class="section-heading">
+
+            <p>KEEP IT SHINING</p>
+
+            <h2>
+                Jewellery Care Guide
+            </h2>
+
+        </div>
+
+
+        <div class="care-grid">
+
+            <div>
+                <span>01</span>
+                <h3>Keep It Dry</h3>
+                <p>
+                    Avoid prolonged contact with water and moisture.
+                </p>
+            </div>
+
+            <div>
+                <span>02</span>
+                <h3>Store Carefully</h3>
+                <p>
+                    Keep your jewellery in a dry jewellery pouch.
+                </p>
+            </div>
+
+            <div>
+                <span>03</span>
+                <h3>Wear With Love</h3>
+                <p>
+                    Put jewellery on after applying perfume.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+
+    <section class="newsletter">
+
+        <p><b>JOIN THE VELVET WORLD</b></p>
+
+        <h2>
+            Stay in the loop.
+        </h2>
+
+        <p>
+            Get first access to new collections and exclusive offers.
+        </p>
+
+        <div class="newsletter-form">
+
+            <input
+                type="email"
+                placeholder="Enter your email"
+            >
+
+            <button onclick="subscribe()">
+                SUBSCRIBE
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-brand">
+
+            <h2><b>VELVET</b></h2>
+
+            <p>
+                Timeless jewellery for everyday elegance.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>SHOP</h4>
+
+            <a href="#collections">Necklaces</a>
+            <a href="#collections">Earrings</a>
+            <a href="#collections">Rings</a>
+            <a href="#collections">Bracelets</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>HELP</h4>
+
+            <a href="#care">Care Guide</a>
+            <a href="#">Shipping</a>
+            <a href="#">Returns</a>
+            <a href="#">Contact</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>FOLLOW</h4>
+
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+            <a href="#">Facebook</a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- CART -->
+
+    <div class="cart-overlay" id="cartOverlay">
+
+        <div class="cart">
+
+            <div class="cart-header">
+
+                <h2>Your Cart</h2>
+
+                <button onclick="closeCart()">✕</button>
+
+            </div>
+
+            <div id="cartItems"></div>
+
+            <div class="cart-total">
+
+                <strong>Total</strong>
+
+                <span id="cartTotal">
+                    ₹0
+                </span>
+
+            </div>
+
+            <button class="checkout-btn">
+                CHECKOUT
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

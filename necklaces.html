@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Necklaces | VELVET</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <b>VELVET</b>
+    </div>
+
+    <nav>
+        <a href="Velvet.html">Home</a>
+        <a href="Velvet.html#collections">Collections</a>
+        <a href="Velvet.html#bestsellers">Best Sellers</a>
+        <a href="Velvet.html#about">About</a>
+        <a href="Velvet.html#care">Care Guide</a>
+    </nav>
+
+    <div class="nav-icons">
+        <button>⌕</button>
+        <button>♡</button>
+        <button onclick="openCart()">🛒 <span id="cartCount">0</span></button>
+    </div>
+
+</header>
+
+
+<!-- PAGE HEADER -->
+
+<section class="collection-header">
+
+    <p>VELVET COLLECTION</p>
+
+    <h1>Necklaces</h1>
+
+    <span>
+        Delicate pieces designed for your everyday shine.
+    </span>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="products" id="necklaces">
+
+    <div class="section-heading">
+
+        <p>EXPLORE OUR COLLECTION</p>
+
+        <h2>Necklaces</h2>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card">
+
+            <div class="product-image necklace-product">
+
+                <span class="badge">BESTSELLER</span>
+
+                <button class="wishlist">♡</button>
+
+                <div class="product-placeholder">
+                    Necklace
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Classic Gold Chain</h3>
+
+                <p class="product-category">
+                    18K Gold • Anti-Tarnish
+                </p>
+
+                <div class="price-row">
+
+                    <span>₹899</span>
+
+                    <button onclick="addToCart('Classic Gold Chain', 899)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card">
+
+            <div class="product-image necklace-product">
+
+                <button class="wishlist">♡</button>
+
+                <div class="product-placeholder">
+                    Necklace
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Luna Pendant</h3>
+
+                <p class="product-category">
+                    Gold Plated • Anti-Tarnish
+                </p>
+
+                <div class="price-row">
+
+                    <span>₹1,199</span>
+
+                    <button onclick="addToCart('Luna Pendant', 1199)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+            <div class="product-image necklace-product">
+
+                <span class="badge">NEW</span>
+
+                <button class="wishlist">♡</button>
+
+                <div class="product-placeholder">
+                    Necklace
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Aura Necklace</h3>
+
+                <p class="product-category">
+                    Stainless Steel • Waterproof
+                </p>
+
+                <div class="price-row">
+
+                    <span>₹1,299</span>
+
+                    <button onclick="addToCart('Aura Necklace', 1299)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product-card">
+
+            <div class="product-image necklace-product">
+
+                <button class="wishlist">♡</button>
+
+                <div class="product-placeholder">
+                    Necklace
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Celeste Chain</h3>
+
+                <p class="product-category">
+                    18K Gold • Anti-Tarnish
+                </p>
+
+                <div class="price-row">
+
+                    <span>₹1,499</span>
+
+                    <button onclick="addToCart('Celeste Chain', 1499)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-brand">
+
+        <h2><b>VELVET</b></h2>
+
+        <p>
+            Timeless jewellery for everyday elegance.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h4>SHOP</h4>
+
+        <a href="necklaces.html">Necklaces</a>
+        <a href="earrings.html">Earrings</a>
+        <a href="rings.html">Rings</a>
+        <a href="bracelets.html">Bracelets</a>
+
+    </div>
+
+
+    <div>
+
+        <h4>HELP</h4>
+
+        <a href="care.html">Care Guide</a>
+        <a href="#">Shipping</a>
+        <a href="#">Returns</a>
+        <a href="#">Contact</a>
+
+    </div>
+
+
+    <div>
+
+        <h4>FOLLOW</h4>
+
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+        <a href="#">Facebook</a>
+
+    </div>
+
+</footer>
+
+
+<!-- CART -->
+
+<div class="cart-overlay" id="cartOverlay">
+
+    <div class="cart">
+
+        <div class="cart-header">
+
+            <h2>Your Cart</h2>
+
+            <button onclick="closeCart()">✕</button>
+
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-total">
+
+            <strong>Total</strong>
+
+            <span id="cartTotal">
+                ₹0
+            </span>
+
+        </div>
+
+        <button class="checkout-btn">
+            CHECKOUT
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

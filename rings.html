@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rings | VELVET</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <b>VELVET</b>
+    </div>
+
+    <nav>
+        <a href="Velvet.html">Home</a>
+        <a href="necklaces.html">Collections</a>
+        <a href="bestsellers.html">Best Sellers</a>
+        <a href="about.html">About</a>
+        <a href="care.html">Care Guide</a>
+    </nav>
+
+    <div class="nav-icons">
+        <button>⌕</button>
+        <button>♡</button>
+        <button onclick="openCart()">🛒 <span id="cartCount">0</span></button>
+    </div>
+
+</header>
+
+
+<section class="collection-header">
+
+    <p>VELVET COLLECTION</p>
+
+    <h1>Rings</h1>
+
+    <span>
+        Minimal rings made for every beautiful moment.
+    </span>
+
+</section>
+
+
+<section class="products">
+
+    <div class="section-heading">
+
+        <p>EXPLORE OUR COLLECTION</p>
+
+        <h2>Rings</h2>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <div class="product-card">
+
+            <div class="product-image rings-product">
+
+                <span class="badge">BESTSELLER</span>
+
+                <button class="wishlist">♡</button>
+
+                <div class="product-placeholder">
+                    Rings
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Classic Gold Ring</h3>
+
+                <p class="product-category">
+                    18K Gold • Anti-Tarnish
+                </p>
+
+                <div class="price-row">
+
+                    <span>₹699</span>
+
+                    <button onclick="addToCart('Classic Gold Ring', 699)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image rings-product">
+
+                <button class="wishlist">♡</button>
+
+                <div class="product-placeholder">
+                    Rings
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Elara Ring</h3>
+
+                <p class="product-category">
+                    Gold Plated • Waterproof
+                </p>
+
+                <div class="price-row">
+
+                    <span>₹799</span>
+
+                    <button onclick="addToCart('Elara Ring', 799)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image rings-product">
+
+                <span class="badge">NEW</span>
+
+                <button class="wishlist">♡</button>
+
+                <div class="product-placeholder">
+                    Rings
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Twist Ring</h3>
+
+                <p class="product-category">
+                    Stainless Steel • Anti-Tarnish
+                </p>
+
+                <div class="price-row">
+
+                    <span>₹599</span>
+
+                    <button onclick="addToCart('Twist Ring', 599)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image rings-product">
+
+                <button class="wishlist">♡</button>
+
+                <div class="product-placeholder">
+                    Rings
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Celeste Ring</h3>
+
+                <p class="product-category">
+                    Gold Plated • Anti-Tarnish
+                </p>
+
+                <div class="price-row">
+
+                    <span>₹899</span>
+
+                    <button onclick="addToCart('Celeste Ring', 899)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-brand">
+        <h2>VELVET</h2>
+        <p>Timeless jewellery for everyday elegance.</p>
+    </div>
+
+    <div>
+        <h4>SHOP</h4>
+        <a href="necklaces.html">Necklaces</a>
+        <a href="earrings.html">Earrings</a>
+        <a href="rings.html">Rings</a>
+        <a href="bracelets.html">Bracelets</a>
+    </div>
+
+    <div>
+        <h4>HELP</h4>
+        <a href="care.html">Care Guide</a>
+        <a href="about.html">About Us</a>
+    </div>
+
+    <div>
+        <h4>ACCOUNT</h4>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Create Account</a>
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
