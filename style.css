@@ -108,7 +108,9 @@ body::before {
     height: 80px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     padding: 0 6%;
@@ -134,7 +136,9 @@ body::before {
 }
 
 
-/* LOGO */
+/* =========================
+   LOGO
+   ========================= */
 
 .logo {
     font-family: "Playfair Display", serif;
@@ -150,7 +154,9 @@ body::before {
 }
 
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+   ========================= */
 
 nav {
     display: flex;
@@ -197,7 +203,9 @@ nav a:hover::after {
 }
 
 
-/* NAV ICONS */
+/* =========================
+   NAV ICONS
+   ========================= */
 
 .nav-icons {
     display: flex;
@@ -228,51 +236,70 @@ nav a:hover::after {
 }
 
 
-/* =========================
+/* =========================================================
    HERO
-   ========================= */
+   ========================================================= */
 
 .hero {
-    min-height: 700px;
+    position: relative !important;
 
-    display: grid;
+    display: flex !important;
 
-    grid-template-columns: 1fr 1fr;
+    min-height: calc(100vh - 80px) !important;
 
-    overflow: hidden;
+    width: 100% !important;
 
-    background:
-        radial-gradient(
-            ellipse at 10% 50%,
-            rgba(255,255,255,.65),
-            transparent 30%
-        ),
-        linear-gradient(
-            120deg,
-            #f3e4f7 0%,
-            #e3c5eb 35%,
-            #c697d1 70%,
-            #a86ab9 100%
-        );
+    padding: 0 !important;
+
+    margin: 0 !important;
+
+    /*
+       IMPORTANT:
+       GitHub "blob" URL DOES NOT work as an image.
+       RAW GitHub URL is used here.
+    */
+
+    background-image:
+        url("https://raw.githubusercontent.com/Komal-Mandal-14/Velvet-Jewellery-/main/Velvet-jewellery.png") !important;
+
+    background-size: cover !important;
+
+    background-position: center center !important;
+
+    background-repeat: no-repeat !important;
+
+    background-color: #b985c9 !important;
+
+    overflow: hidden !important;
 }
 
 
-/* HERO CONTENT */
+/* =========================
+   HERO CONTENT
+   ========================= */
 
 .hero-content {
-    display: flex;
+    width: 55% !important;
 
-    flex-direction: column;
+    min-height: calc(100vh - 80px) !important;
 
-    justify-content: center;
+    display: flex !important;
 
-    padding: 8%;
+    flex-direction: column !important;
 
-    position: relative;
+    justify-content: center !important;
+
+    padding: 0 0 0 8% !important;
+
+    position: relative !important;
+
+    z-index: 5 !important;
 }
 
 
-/* VELVET LIGHT SHADOW */
+/* =========================
+   HERO LIGHT
+   ========================= */
 
 .hero-content::before {
     content: "";
@@ -289,11 +316,19 @@ nav a:hover::after {
 
     border-radius: 50%;
 
-    background: rgba(255,255,255,.35);
+    background: rgba(255,255,255,.22);
 
     filter: blur(80px);
+
+    pointer-events: none;
+
+    z-index: -1;
 }
 
+
+/* =========================
+   SMALL TITLE
+   ========================= */
 
 .small-title {
     font-size: 12px;
@@ -306,39 +341,49 @@ nav a:hover::after {
 }
 
 
+/* =========================
+   HERO HEADING
+   ========================= */
+
 .hero h1 {
-    font-family: "Playfair Display", serif;
+    font-family: "Playfair Display", serif !important;
 
-    font-size: clamp(52px, 6vw, 82px);
+    font-size: clamp(55px, 5.5vw, 82px) !important;
 
-    line-height: 1.02;
+    line-height: 1.02 !important;
 
-    font-weight: 500;
+    font-weight: 500 !important;
 
-    margin: 20px 0;
+    margin: 20px 0 !important;
 
-    color: var(--velvet-6);
+    color: var(--velvet-6) !important;
 
-    position: relative;
+    white-space: nowrap !important;
+
+    position: relative !important;
 }
 
 .hero h1 span {
-    font-style: italic;
+    font-style: italic !important;
 
-    color: var(--velvet-5);
+    color: var(--velvet-5) !important;
 }
 
 
+/* =========================
+   HERO TEXT
+   ========================= */
+
 .hero-text {
-    max-width: 470px;
+    max-width: 470px !important;
 
-    color: var(--soft-text);
+    color: var(--soft-text) !important;
 
-    line-height: 1.8;
+    line-height: 1.8 !important;
 
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
 
-    position: relative;
+    position: relative !important;
 }
 
 
@@ -386,129 +431,11 @@ nav a:hover::after {
 
 
 /* =========================
-   HERO IMAGE
+   REMOVE OLD RIGHT HERO IMAGE
    ========================= */
 
 .hero-image {
-    min-height: 600px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background:
-        radial-gradient(
-            ellipse at 25% 20%,
-            rgba(255,255,255,.55),
-            transparent 25%
-        ),
-        radial-gradient(
-            ellipse at 75% 80%,
-            rgba(57,29,66,.4),
-            transparent 40%
-        ),
-        linear-gradient(
-            125deg,
-            #c995d5,
-            #9d64ac 45%,
-            #71447e 100%
-        );
-}
-
-
-/* VELVET FOLDS */
-
-.hero-image::before {
-    content: "";
-
-    position: absolute;
-
-    width: 150%;
-
-    height: 150%;
-
-    background:
-        repeating-linear-gradient(
-            115deg,
-            rgba(255,255,255,.16) 0px,
-            transparent 35px,
-            rgba(73,38,83,.18) 75px,
-            transparent 120px
-        );
-
-    transform: rotate(-8deg);
-
-    opacity: .6;
-}
-
-
-/* IMAGE PLACEHOLDER */
-
-.image-placeholder {
-    width: 70%;
-
-    height: 75%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    position: relative;
-
-    z-index: 2;
-
-    background:
-        radial-gradient(
-            ellipse at 30% 20%,
-            rgba(255,255,255,.5),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #e1c1e8,
-            #b47bc2 50%,
-            #855091
-        );
-
-    box-shadow:
-        0 35px 70px rgba(53,28,62,.3);
-
-    border: 1px solid rgba(255,255,255,.35);
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 34px;
-
-    letter-spacing: 6px;
-
-    color: white;
-
-    text-shadow:
-        0 3px 15px rgba(52,28,61,.35);
-}
-
-.image-placeholder::before {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        repeating-linear-gradient(
-            120deg,
-            transparent 0px,
-            rgba(255,255,255,.12) 15px,
-            transparent 45px
-        );
+    display: none !important;
 }
 
 
@@ -628,7 +555,7 @@ nav a:hover::after {
 
     grid-template-columns: repeat(4, 1fr);
 
-    gap: 22px;
+    gap: 24px;
 
     width: 100%;
 }
@@ -646,7 +573,6 @@ nav a:hover::after {
 .collection-card:hover {
     transform: translateY(-10px);
 }
-
 
 .collection-image {
     width: 100%;
@@ -674,7 +600,9 @@ nav a:hover::after {
 }
 
 
-/* VELVET COLLECTION SHADES */
+/* =========================
+   COLLECTION SHADES
+   ========================= */
 
 .necklace {
     background:
@@ -788,7 +716,6 @@ nav a:hover::after {
     gap: 20px;
 }
 
-
 .product-card {
     background:
         linear-gradient(
@@ -808,7 +735,6 @@ nav a:hover::after {
 .product-card:hover {
     transform: translateY(-9px);
 }
-
 
 .product-image {
     height: 400px;
@@ -835,7 +761,6 @@ nav a:hover::after {
         );
 }
 
-
 .product-placeholder {
     font-family: "Playfair Display", serif;
 
@@ -848,7 +773,9 @@ nav a:hover::after {
 }
 
 
-/* BADGE */
+/* =========================
+   BADGE
+   ========================= */
 
 .badge {
     position: absolute;
@@ -869,7 +796,9 @@ nav a:hover::after {
 }
 
 
-/* WISHLIST */
+/* =========================
+   WISHLIST
+   ========================= */
 
 .wishlist {
     position: absolute;
@@ -904,7 +833,9 @@ nav a:hover::after {
 }
 
 
-/* PRODUCT INFO */
+/* =========================
+   PRODUCT INFO
+   ========================= */
 
 .product-info {
     padding: 20px;
@@ -1092,7 +1023,7 @@ nav a:hover::after {
 
     font-size: 35px;
 
-    color: var(--velvet-5);
+    color: var(--gold);
 }
 
 .care-grid h3 {
@@ -1320,7 +1251,7 @@ footer a:hover {
 
 
 /* =========================
-   COLLECTION PRODUCTS
+   COLLECTION PRODUCT BACKGROUNDS
    ========================= */
 
 .necklace-product {
@@ -1394,17 +1325,16 @@ footer a:hover {
         display: none;
     }
 
-    .hero,
-    .story {
-        grid-template-columns: 1fr;
-    }
-
     .hero-content {
-        padding: 70px 7%;
+        width: 70% !important;
+
+        padding-left: 7% !important;
     }
 
-    .hero-image {
-        min-height: 500px;
+    .hero h1 {
+        white-space: normal !important;
+
+        font-size: 55px !important;
     }
 
     .features {
@@ -1423,6 +1353,14 @@ footer a:hover {
     footer {
         grid-template-columns: 1fr 1fr;
     }
+
+    .story {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        display: none !important;
+    }
 }
 
 
@@ -1440,8 +1378,24 @@ footer a:hover {
         font-size: 22px;
     }
 
+    .hero {
+        min-height: calc(100vh - 80px) !important;
+
+        background-position: center center !important;
+    }
+
+    .hero-content {
+        width: 90% !important;
+
+        min-height: calc(100vh - 80px) !important;
+
+        padding-left: 7% !important;
+    }
+
     .hero h1 {
-        font-size: 48px;
+        font-size: 45px !important;
+
+        white-space: normal !important;
     }
 
     .features,
@@ -1454,6 +1408,10 @@ footer a:hover {
     .products,
     .care {
         padding: 70px 5%;
+    }
+
+    .collection-image {
+        height: 350px;
     }
 
     .section-heading h2,
@@ -1476,145 +1434,5 @@ footer a:hover {
 
     .collection-header h1 {
         font-size: 45px;
-    }
-}
-
-
-/* =========================================================
-   FINAL HERO BACKGROUND IMAGE FIX
-   ========================================================= */
-
-.hero {
-    position: relative !important;
-
-    display: flex !important;
-
-    width: 100% !important;
-
-    min-height: calc(100vh - 80px) !important;
-
-    padding: 0 !important;
-
-    margin: 0 !important;
-
-    /*
-       IMPORTANT:
-       Use RAW GitHub image URL.
-       Do NOT use github.com/.../blob/...
-    */
-
-    background-image:
-        url("https://raw.githubusercontent.com/Komal-Mandal-14/Velvet-Jewellery-/main/Velvet-jewellery.png") !important;
-
-    background-size: cover !important;
-
-    background-position: center !important;
-
-    background-repeat: no-repeat !important;
-
-    overflow: hidden !important;
-}
-
-
-/* LEFT TEXT */
-
-.hero-content {
-    width: 55% !important;
-
-    min-height: calc(100vh - 80px) !important;
-
-    display: flex !important;
-
-    flex-direction: column !important;
-
-    justify-content: center !important;
-
-    padding: 0 0 0 8% !important;
-
-    position: relative !important;
-
-    z-index: 5 !important;
-}
-
-
-/* HEADING */
-
-.hero h1 {
-    font-family: "Playfair Display", serif !important;
-
-    font-size: clamp(55px, 5.5vw, 82px) !important;
-
-    line-height: 1.02 !important;
-
-    font-weight: 500 !important;
-
-    margin: 20px 0 !important;
-
-    color: var(--velvet-6) !important;
-
-    white-space: nowrap !important;
-}
-
-.hero h1 span {
-    font-style: italic !important;
-
-    color: var(--velvet-5) !important;
-}
-
-
-/* DESCRIPTION */
-
-.hero-text {
-    max-width: 470px !important;
-
-    color: var(--soft-text) !important;
-
-    line-height: 1.8 !important;
-
-    margin-bottom: 30px !important;
-}
-
-
-/* REMOVE OLD RIGHT IMAGE */
-
-.hero-image {
-    display: none !important;
-}
-
-
-/* =========================
-   TABLET HERO
-   ========================= */
-
-@media (max-width: 900px) {
-
-    .hero-content {
-        width: 70% !important;
-
-        padding-left: 7% !important;
-    }
-
-    .hero h1 {
-        white-space: normal !important;
-
-        font-size: 55px !important;
-    }
-}
-
-
-/* =========================
-   MOBILE HERO
-   ========================= */
-
-@media (max-width: 600px) {
-
-    .hero-content {
-        width: 90% !important;
-
-        padding-left: 7% !important;
-    }
-
-    .hero h1 {
-        font-size: 45px !important;
     }
 }
