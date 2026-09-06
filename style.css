@@ -1,6 +1,7 @@
 /* =========================================================
    VELVET JEWELLERY
-   RESPONSIVE LUXURY PURPLE THEME
+   LUXURY PURPLE THEME
+   FULL RESPONSIVE
    ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
@@ -218,14 +219,14 @@ nav a:hover::after {
 
     overflow: hidden;
 
-    background: #b985c9;
+    isolation: isolate;
+
+    background: #d8b4e3;
 }
 
 
 /* =========================================================
-   HERO IMAGE
-   IMPORTANT:
-   IMAGE IS AN ACTUAL IMG, NOT CSS BACKGROUND
+   HERO BACKGROUND IMAGE
    ========================================================= */
 
 .hero-bg-image {
@@ -236,38 +237,38 @@ nav a:hover::after {
     width: 100%;
     height: 100%;
 
+    display: block;
+
     object-fit: cover;
 
     object-position: center center;
 
-    display: block;
+    z-index: -2;
 
-    z-index: 0;
+    pointer-events: none;
 }
 
 
 /* =========================================================
-   HERO IMAGE OVERLAY
+   HERO OVERLAY
    ========================================================= */
 
-.hero::after {
-    content: "";
-
+.hero-overlay {
     position: absolute;
 
     inset: 0;
 
-    z-index: 1;
+    z-index: -1;
 
     pointer-events: none;
 
     background:
         linear-gradient(
             90deg,
-            rgba(245,226,249,.78) 0%,
-            rgba(245,226,249,.55) 25%,
-            rgba(245,226,249,.12) 52%,
-            rgba(61,35,71,.04) 100%
+            rgba(247,231,249,.68) 0%,
+            rgba(247,231,249,.44) 28%,
+            rgba(247,231,249,.14) 58%,
+            rgba(247,231,249,.02) 100%
         );
 }
 
@@ -286,7 +287,6 @@ nav a:hover::after {
     max-width: 700px;
 
     padding-left: 8%;
-
     padding-right: 20px;
 
     display: flex;
@@ -298,7 +298,7 @@ nav a:hover::after {
 
 
 /* =========================================================
-   SMALL TITLE
+   HERO SMALL TITLE
    ========================================================= */
 
 .small-title {
@@ -1309,6 +1309,7 @@ footer a:hover {
 
     .hero-content {
         width: 58%;
+
         padding-left: 6%;
     }
 
@@ -1341,6 +1342,23 @@ footer a:hover {
 
     .hero {
         min-height: calc(100svh - 72px);
+
+        height: calc(100svh - 72px);
+    }
+
+    .hero-bg-image {
+        object-position: center center;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(247,231,249,.76) 0%,
+                rgba(247,231,249,.45) 38%,
+                rgba(247,231,249,.12) 70%,
+                rgba(247,231,249,.02) 100%
+            );
     }
 
     .hero-content {
@@ -1407,6 +1425,8 @@ footer a:hover {
        ------------------------- */
 
     .hero {
+        width: 100%;
+
         min-height: calc(100svh - 68px);
 
         height: calc(100svh - 68px);
@@ -1415,51 +1435,65 @@ footer a:hover {
 
         align-items: center;
 
+        position: relative;
+
         overflow: hidden;
+
+        isolation: isolate;
     }
 
 
-    /*
-       IMPORTANT MOBILE FIX
-
-       Landscape image ko stretch nahi karenge.
-       Image poori screen cover karegi.
-
-       Text ke peeche readable area maintain
-       karne ke liye image ka position right-center.
-    */
+    /* -------------------------
+       MOBILE BACKGROUND IMAGE
+       ------------------------- */
 
     .hero-bg-image {
+        position: absolute;
+
+        inset: 0;
+
         width: 100%;
         height: 100%;
 
+        display: block;
+
         object-fit: cover;
+
+        /*
+           Jewellery/photo ko phone par
+           right side mein maintain karega.
+        */
 
         object-position: 68% center;
 
-        display: block;
+        z-index: -2;
     }
 
 
-    /*
-       Mobile overlay thoda stronger
-       so text clearly visible.
-    */
+    /* -------------------------
+       MOBILE OVERLAY
+       ------------------------- */
 
-    .hero::after {
+    .hero-overlay {
+        position: absolute;
+
+        inset: 0;
+
+        z-index: -1;
+
         background:
             linear-gradient(
                 90deg,
-                rgba(245,226,249,.92) 0%,
-                rgba(245,226,249,.76) 42%,
-                rgba(245,226,249,.25) 72%,
-                rgba(61,35,71,.03) 100%
+                rgba(247,231,249,.78) 0%,
+                rgba(247,231,249,.52) 36%,
+                rgba(247,231,249,.18) 70%,
+                rgba(247,231,249,.02) 100%
             );
     }
 
 
     /* -------------------------
-       HERO CONTENT
+       MOBILE HERO CONTENT
        ------------------------- */
 
     .hero-content {
@@ -1469,12 +1503,13 @@ footer a:hover {
 
         padding:
             35px
-            22px
-            35px
             22px;
 
         justify-content: center;
+
+        z-index: 2;
     }
+
 
     .small-title {
         font-size: 9px;
@@ -1483,6 +1518,7 @@ footer a:hover {
 
         margin-bottom: 13px;
     }
+
 
     .hero h1 {
         font-size: clamp(39px, 11vw, 52px);
@@ -1494,6 +1530,7 @@ footer a:hover {
         max-width: 330px;
     }
 
+
     .hero-text {
         max-width: 300px;
 
@@ -1503,6 +1540,7 @@ footer a:hover {
 
         margin-bottom: 23px;
     }
+
 
     .primary-btn {
         padding: 14px 21px;
