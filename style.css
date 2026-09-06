@@ -1575,7 +1575,8 @@ footer a:hover {
     padding: 0 !important;
     margin: 0 !important;
 
-    background-image: url(background-image: url("./Velvet%20jewellery.png") !important;
+    /* ONLY FIXED THIS BACKGROUND LINE */
+    background-image: url("./Velvet%20jewellery.png") !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
