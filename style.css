@@ -44,7 +44,6 @@ body {
     font-family: "DM Sans", sans-serif;
     color: var(--text);
 
-    /* REAL VELVET-LIKE BACKGROUND */
     background:
         radial-gradient(
             ellipse at 15% 20%,
@@ -483,6 +482,17 @@ nav a:hover::after {
         0 35px 70px rgba(53,28,62,.3);
 
     border: 1px solid rgba(255,255,255,.35);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 34px;
+
+    letter-spacing: 6px;
+
+    color: white;
+
+    text-shadow:
+        0 3px 15px rgba(52,28,61,.35);
 }
 
 .image-placeholder::before {
@@ -499,19 +509,6 @@ nav a:hover::after {
             rgba(255,255,255,.12) 15px,
             transparent 45px
         );
-}
-
-.image-placeholder {
-    font-family: "Playfair Display", serif;
-
-    font-size: 34px;
-
-    letter-spacing: 6px;
-
-    color: white;
-
-    text-shadow:
-        0 3px 15px rgba(52,28,61,.35);
 }
 
 
@@ -554,7 +551,7 @@ nav a:hover::after {
 .feature-icon {
     font-size: 25px;
 
-    color: var(--#633C70);
+    color: #633C70;
 
     margin-bottom: 12px;
 }
@@ -632,9 +629,15 @@ nav a:hover::after {
     grid-template-columns: repeat(4, 1fr);
 
     gap: 22px;
+
+    width: 100%;
 }
 
 .collection-card {
+    width: 100%;
+
+    min-width: 0;
+
     text-align: center;
 
     transition: .4s ease;
@@ -646,7 +649,9 @@ nav a:hover::after {
 
 
 .collection-image {
-    height: 400px;
+    width: 100%;
+
+    height: 380px;
 
     margin-bottom: 20px;
 
@@ -656,6 +661,16 @@ nav a:hover::after {
 
     box-shadow:
         0 20px 45px rgba(67,36,77,.18);
+}
+
+.collection-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
 }
 
 
@@ -1077,7 +1092,7 @@ nav a:hover::after {
 
     font-size: 35px;
 
-    color: var(--brown);
+    color: var(--velvet-5);
 }
 
 .care-grid h3 {
@@ -1253,6 +1268,123 @@ footer a:hover {
 
 
 /* =========================
+   COLLECTION PAGE
+   ========================= */
+
+.collection-header {
+    text-align: center;
+
+    padding: 90px 20px 70px;
+
+    background:
+        radial-gradient(
+            ellipse at 20% 20%,
+            rgba(255,255,255,.55),
+            transparent 30%
+        ),
+        linear-gradient(
+            125deg,
+            #f0dff5,
+            #c998d2,
+            #9a62a7
+        );
+}
+
+.collection-header p {
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #633c70;
+
+    margin-bottom: 15px;
+}
+
+.collection-header h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 65px;
+
+    font-weight: 500;
+
+    color: #3d2347;
+
+    margin-bottom: 15px;
+}
+
+.collection-header span {
+    color: #72547b;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   COLLECTION PRODUCTS
+   ========================= */
+
+.necklace-product {
+    background:
+        radial-gradient(
+            ellipse at 25% 20%,
+            rgba(255,255,255,.6),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #e3c7ea,
+            #b57bc2 50%,
+            #794985
+        );
+}
+
+.earrings-product {
+    background:
+        radial-gradient(
+            ellipse at 25% 20%,
+            rgba(255,255,255,.6),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #e2c4e9,
+            #b77fc4 50%,
+            #754480
+        );
+}
+
+.rings-product {
+    background:
+        radial-gradient(
+            ellipse at 70% 20%,
+            rgba(255,255,255,.55),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #e9d2ef,
+            #c18aca 50%,
+            #81508d
+        );
+}
+
+.bracelets-product {
+    background:
+        radial-gradient(
+            ellipse at 30% 25%,
+            rgba(255,255,255,.5),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #d3a8dd,
+            #9d64aa 50%,
+            #653b70
+        );
+}
+
+
+/* =========================
    TABLET
    ========================= */
 
@@ -1341,275 +1473,77 @@ footer a:hover {
     .cart {
         width: 100%;
     }
-}
-
-/* =========================
-   COLLECTION PAGE
-   ========================= */
-
-.collection-header {
-    text-align: center;
-    padding: 90px 20px 70px;
-
-    background:
-        radial-gradient(
-            ellipse at 20% 20%,
-            rgba(255,255,255,.55),
-            transparent 30%
-        ),
-        linear-gradient(
-            125deg,
-            #f0dff5,
-            #c998d2,
-            #9a62a7
-        );
-}
-
-.collection-header p {
-    font-size: 12px;
-    letter-spacing: 4px;
-    color: #633c70;
-    margin-bottom: 15px;
-}
-
-.collection-header h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 65px;
-    font-weight: 500;
-    color: #3d2347;
-    margin-bottom: 15px;
-}
-
-.collection-header span {
-    color: #72547b;
-    font-size: 15px;
-}
-
-.necklace-product {
-    background:
-        radial-gradient(
-            ellipse at 25% 20%,
-            rgba(255,255,255,.6),
-            transparent 30%
-        ),
-        linear-gradient(
-            145deg,
-            #e3c7ea,
-            #b57bc2 50%,
-            #794985
-        );
-}
-
-@media (max-width: 600px) {
 
     .collection-header h1 {
         font-size: 45px;
     }
-
-}
-
-/* =========================
-   COLLECTION PAGES
-   ========================= */
-
-.collection-header {
-    text-align: center;
-    padding: 90px 20px 70px;
-
-    background:
-        radial-gradient(
-            ellipse at 20% 20%,
-            rgba(255,255,255,.55),
-            transparent 30%
-        ),
-        linear-gradient(
-            125deg,
-            #f0dff5,
-            #c998d2,
-            #9a62a7
-        );
-}
-
-.collection-header p {
-    font-size: 12px;
-    letter-spacing: 4px;
-    color: #633c70;
-    margin-bottom: 15px;
-}
-
-.collection-header h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 65px;
-    font-weight: 500;
-    color: #3d2347;
-    margin-bottom: 15px;
-}
-
-.collection-header span {
-    color: #72547b;
-    font-size: 15px;
 }
 
 
-/* EARRINGS */
-
-.earrings-product {
-    background:
-        radial-gradient(
-            ellipse at 25% 20%,
-            rgba(255,255,255,.6),
-            transparent 30%
-        ),
-        linear-gradient(
-            145deg,
-            #e2c4e9,
-            #b77fc4 50%,
-            #754480
-        );
-}
-
-
-/* RINGS */
-
-.rings-product {
-    background:
-        radial-gradient(
-            ellipse at 70% 20%,
-            rgba(255,255,255,.55),
-            transparent 30%
-        ),
-        linear-gradient(
-            145deg,
-            #e9d2ef,
-            #c18aca 50%,
-            #81508d
-        );
-}
-
-
-/* BRACELETS */
-
-.bracelets-product {
-    background:
-        radial-gradient(
-            ellipse at 30% 25%,
-            rgba(255,255,255,.5),
-            transparent 30%
-        ),
-        linear-gradient(
-            145deg,
-            #d3a8dd,
-            #9d64aa 50%,
-            #653b70
-        );
-}
-
-
-@media (max-width: 600px) {
-
-    .collection-header h1 {
-        font-size: 45px;
-    }
-
-}
-
-/* ===== COLLECTION CARDS FIX ===== */
-
-.collection-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    width: 100%;
-}
-
-.collection-card {
-    width: 100%;
-    min-width: 0;
-}
-
-.collection-image {
-    width: 100%;
-    height: 380px;
-    overflow: hidden;
-}
-
-.collection-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-    .collection-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .collection-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .collection-image {
-        height: 350px;
-    }
-}
-
-/* =========================
-   VELVET HERO - IMAGE FIT
-   ========================= */
-
-/* =========================
-   HERO - FULL BACKGROUND
-   ========================= */
-
-/* =========================
-   HERO - FULL BACKGROUND
-   ========================= */
+/* =========================================================
+   FINAL HERO BACKGROUND IMAGE FIX
+   ========================================================= */
 
 .hero {
     position: relative !important;
+
     display: flex !important;
 
-    min-height: calc(100vh - 80px) !important;
     width: 100% !important;
 
+    min-height: calc(100vh - 80px) !important;
+
     padding: 0 !important;
+
     margin: 0 !important;
 
-    background-image: url(https://github.com/Komal-Mandal-14/Velvet-Jewellery-/blob/main/Velvet-jewellery.png) !important;
+    /*
+       IMPORTANT:
+       Use RAW GitHub image URL.
+       Do NOT use github.com/.../blob/...
+    */
+
+    background-image:
+        url("https://raw.githubusercontent.com/Komal-Mandal-14/Velvet-Jewellery-/main/Velvet-jewellery.png") !important;
+
     background-size: cover !important;
+
     background-position: center !important;
+
     background-repeat: no-repeat !important;
 
     overflow: hidden !important;
 }
 
+
 /* LEFT TEXT */
 
 .hero-content {
     width: 55% !important;
+
     min-height: calc(100vh - 80px) !important;
 
     display: flex !important;
+
     flex-direction: column !important;
+
     justify-content: center !important;
 
     padding: 0 0 0 8% !important;
 
     position: relative !important;
+
     z-index: 5 !important;
 }
 
 
-/* HEADING - ONLY 2 LINES */
+/* HEADING */
 
 .hero h1 {
     font-family: "Playfair Display", serif !important;
 
     font-size: clamp(55px, 5.5vw, 82px) !important;
+
     line-height: 1.02 !important;
 
     font-weight: 500 !important;
@@ -1623,6 +1557,7 @@ footer a:hover {
 
 .hero h1 span {
     font-style: italic !important;
+
     color: var(--velvet-5) !important;
 }
 
@@ -1640,32 +1575,42 @@ footer a:hover {
 }
 
 
-/* REMOVE RIGHT IMAGE */
+/* REMOVE OLD RIGHT IMAGE */
 
 .hero-image {
     display: none !important;
 }
 
 
-/* MOBILE */
+/* =========================
+   TABLET HERO
+   ========================= */
 
 @media (max-width: 900px) {
 
     .hero-content {
         width: 70% !important;
+
         padding-left: 7% !important;
     }
 
     .hero h1 {
         white-space: normal !important;
+
         font-size: 55px !important;
     }
 }
+
+
+/* =========================
+   MOBILE HERO
+   ========================= */
 
 @media (max-width: 600px) {
 
     .hero-content {
         width: 90% !important;
+
         padding-left: 7% !important;
     }
 
