@@ -245,32 +245,53 @@ nav a:hover::after {
 
     display: flex !important;
 
-    min-height: calc(100vh - 80px) !important;
-
     width: 100% !important;
 
-    padding: 0 !important;
+    min-height: calc(100vh - 80px) !important;
 
     margin: 0 !important;
 
-    /*
-       IMPORTANT:
-       GitHub "blob" URL DOES NOT work as an image.
-       RAW GitHub URL is used here.
-    */
-
-    background-image:
-        url("https://raw.githubusercontent.com/Komal-Mandal-14/Velvet-Jewellery-/main/Velvet-jewellery.png") !important;
-
-    background-size: cover !important;
-
-    background-position: center center !important;
-
-    background-repeat: no-repeat !important;
-
-    background-color: #b985c9 !important;
+    padding: 0 !important;
 
     overflow: hidden !important;
+
+    /*
+       IMPORTANT:
+       USE THE IMAGE DIRECTLY FROM THE SAME GITHUB
+       REPOSITORY.
+    */
+
+    background:
+        url("https://raw.githubusercontent.com/Komal-Mandal-14/Velvet-Jewellery-/main/Velvet-jewellery.png")
+        center center / cover
+        no-repeat !important;
+
+    background-color: #b985c9 !important;
+}
+
+
+/* =========================
+   HERO IMAGE BACKUP
+   ========================= */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(250,238,252,.08) 0%,
+            rgba(250,238,252,0) 55%,
+            rgba(61,35,71,.04) 100%
+        );
+
+    pointer-events: none;
+
+    z-index: 1;
 }
 
 
@@ -298,31 +319,11 @@ nav a:hover::after {
 
 
 /* =========================
-   HERO LIGHT
+   REMOVE OLD HERO LIGHT
    ========================= */
 
 .hero-content::before {
-    content: "";
-
-    position: absolute;
-
-    width: 350px;
-
-    height: 350px;
-
-    left: -150px;
-
-    top: 20%;
-
-    border-radius: 50%;
-
-    background: rgba(255,255,255,.22);
-
-    filter: blur(80px);
-
-    pointer-events: none;
-
-    z-index: -1;
+    display: none !important;
 }
 
 
@@ -361,6 +362,8 @@ nav a:hover::after {
     white-space: nowrap !important;
 
     position: relative !important;
+
+    z-index: 6 !important;
 }
 
 .hero h1 span {
@@ -384,6 +387,8 @@ nav a:hover::after {
     margin-bottom: 30px !important;
 
     position: relative !important;
+
+    z-index: 6 !important;
 }
 
 
@@ -420,6 +425,8 @@ nav a:hover::after {
     transition: .3s ease;
 
     position: relative;
+
+    z-index: 6;
 }
 
 .primary-btn:hover {
@@ -431,10 +438,14 @@ nav a:hover::after {
 
 
 /* =========================
-   REMOVE OLD RIGHT HERO IMAGE
+   OLD HERO IMAGE
    ========================= */
 
 .hero-image {
+    display: none !important;
+}
+
+.image-placeholder {
     display: none !important;
 }
 
@@ -663,7 +674,6 @@ nav a:hover::after {
             #593364
         );
 }
-
 
 .collection-card h3 {
     font-family: "Playfair Display", serif;
@@ -1199,7 +1209,7 @@ footer a:hover {
 
 
 /* =========================
-   COLLECTION PAGE
+   COLLECTION HEADER
    ========================= */
 
 .collection-header {
@@ -1382,6 +1392,8 @@ footer a:hover {
         min-height: calc(100vh - 80px) !important;
 
         background-position: center center !important;
+
+        background-size: cover !important;
     }
 
     .hero-content {
@@ -1435,4 +1447,36 @@ footer a:hover {
     .collection-header h1 {
         font-size: 45px;
     }
+}
+
+
+/* =========================================================
+   FINAL HERO OVERRIDE
+   DO NOT DELETE THIS PART
+   ========================================================= */
+
+section.hero#home {
+    background:
+        url("https://raw.githubusercontent.com/Komal-Mandal-14/Velvet-Jewellery-/main/Velvet-jewellery.png")
+        center center / cover
+        no-repeat !important;
+
+    background-color: #b985c9 !important;
+
+    background-image:
+        url("https://raw.githubusercontent.com/Komal-Mandal-14/Velvet-Jewellery-/main/Velvet-jewellery.png") !important;
+
+    background-size: cover !important;
+
+    background-position: center center !important;
+
+    background-repeat: no-repeat !important;
+}
+
+section.hero#home .hero-image {
+    display: none !important;
+}
+
+section.hero#home .hero-content::before {
+    display: none !important;
 }
