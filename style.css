@@ -1378,16 +1378,90 @@ footer a:hover {
    MOBILE
    ========================= */
 
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .hero {
+        min-height: calc(100vh - 80px) !important;
+
+        background-position: center center !important;
+
+        background-size: cover !important;
+    }
+
+    .hero-content {
+        width: 90% !important;
+
+        min-height: calc(100vh - 80px) !important;
+
+        padding-left: 7% !important;
+    }
+
+    .hero h1 {
+        font-size: 45px !important;
+
+        white-space: normal !important;
+    }
+
+    .features,
+    .collection-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collections,
+    .products,
+    .care {
+        padding: 70px 5%;
+    }
+
+    .collection-image {
+        height: 350px;
+    }
+
+    .section-heading h2,
+    .story-content h2,
+    .newsletter h2 {
+        font-size: 40px;
+    }
+
+    .story-content {
+        padding: 15% 8%;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .cart {
+        width: 100%;
+    }
+
+    .collection-header h1 {
+        font-size: 45px;
+    }
+}
+
+
 /* =========================================================
-   FINAL HERO + MOBILE FIX
+   FINAL HERO OVERRIDE
+   DO NOT DELETE THIS PART
    ========================================================= */
 
 section.hero#home {
-    position: relative !important;
+    background:
+        url("https://raw.githubusercontent.com/Komal-Mandal-14/Velvet-Jewellery-/main/Velvet-jewellery.png")
+        center center / cover
+        no-repeat !important;
 
-    width: 100% !important;
-
-    min-height: calc(100vh - 80px) !important;
+    background-color: #b985c9 !important;
 
     background-image:
         url("https://raw.githubusercontent.com/Komal-Mandal-14/Velvet-Jewellery-/main/Velvet-jewellery.png") !important;
@@ -1397,10 +1471,6 @@ section.hero#home {
     background-position: center center !important;
 
     background-repeat: no-repeat !important;
-
-    background-color: #b985c9 !important;
-
-    overflow: hidden !important;
 }
 
 section.hero#home .hero-image {
@@ -1409,220 +1479,4 @@ section.hero#home .hero-image {
 
 section.hero#home .hero-content::before {
     display: none !important;
-}
-
-
-/* =========================================================
-   MOBILE HERO
-   ========================================================= */
-
-@media screen and (max-width: 600px) {
-
-    html,
-    body {
-        width: 100% !important;
-        max-width: 100% !important;
-        overflow-x: hidden !important;
-    }
-
-    .navbar {
-        width: 100% !important;
-        height: 65px !important;
-
-        padding: 0 18px !important;
-    }
-
-    .logo {
-        font-size: 21px !important;
-        letter-spacing: 4px !important;
-    }
-
-    nav {
-        display: none !important;
-    }
-
-    .nav-icons {
-        gap: 8px !important;
-    }
-
-    .nav-icons button {
-        font-size: 17px !important;
-    }
-
-
-    /* =========================
-       MOBILE HERO
-       ========================= */
-
-    section.hero#home {
-        width: 100% !important;
-
-        height: calc(100svh - 65px) !important;
-
-        min-height: 600px !important;
-
-        /*
-         * IMPORTANT:
-         * Image ko left side se crop kar raha hai.
-         * Isse right-side blank area mobile par nahi aayega.
-         */
-
-        background-size: auto 100% !important;
-
-        background-position: left center !important;
-
-        background-repeat: no-repeat !important;
-
-        background-color: #b985c9 !important;
-    }
-
-
-    /* =========================
-       HERO CONTENT
-       ========================= */
-
-    section.hero#home .hero-content {
-        width: 100% !important;
-
-        height: 100% !important;
-
-        min-height: 0 !important;
-
-        padding: 0 28px !important;
-
-        display: flex !important;
-
-        flex-direction: column !important;
-
-        justify-content: center !important;
-
-        align-items: flex-start !important;
-
-        position: relative !important;
-
-        z-index: 10 !important;
-    }
-
-
-    /* =========================
-       SMALL TITLE
-       ========================= */
-
-    section.hero#home .small-title {
-        font-size: 9px !important;
-
-        letter-spacing: 3px !important;
-
-        margin-bottom: 5px !important;
-    }
-
-
-    /* =========================
-       HERO HEADING
-       ========================= */
-
-    section.hero#home h1 {
-        font-size: 43px !important;
-
-        line-height: 1.03 !important;
-
-        margin: 12px 0 18px !important;
-
-        max-width: 330px !important;
-
-        white-space: normal !important;
-    }
-
-    section.hero#home h1 span {
-        display: block !important;
-    }
-
-
-    /* =========================
-       HERO DESCRIPTION
-       ========================= */
-
-    section.hero#home .hero-text {
-        width: 100% !important;
-
-        max-width: 310px !important;
-
-        font-size: 13px !important;
-
-        line-height: 1.65 !important;
-
-        margin-bottom: 25px !important;
-    }
-
-
-    /* =========================
-       BUTTON
-       ========================= */
-
-    section.hero#home .primary-btn {
-        padding: 14px 23px !important;
-
-        font-size: 10px !important;
-
-        letter-spacing: 1.5px !important;
-    }
-
-
-    /* =========================
-       OLD HERO IMAGE OFF
-       ========================= */
-
-    section.hero#home .hero-image {
-        display: none !important;
-    }
-
-
-    /* =========================
-       OTHER MOBILE SECTIONS
-       ========================= */
-
-    .features {
-        grid-template-columns: 1fr 1fr !important;
-    }
-
-    .collection-grid,
-    .product-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .collections,
-    .products,
-    .care {
-        padding: 65px 20px !important;
-    }
-
-    .collection-image {
-        height: 350px !important;
-    }
-
-    .section-heading h2,
-    .story-content h2,
-    .newsletter h2 {
-        font-size: 40px !important;
-    }
-
-    .story {
-        grid-template-columns: 1fr !important;
-    }
-
-    .story-content {
-        padding: 15% 8% !important;
-    }
-
-    footer {
-        grid-template-columns: 1fr !important;
-    }
-
-    .cart {
-        width: 100% !important;
-    }
-
-    .collection-header h1 {
-        font-size: 45px !important;
-    }
 }
