@@ -159,7 +159,7 @@ nav a::after {
     width: 0;
     height: 1px;
 
-    background: var(--purple);
+    background: var(--gold);
 
     transition: .3s ease;
 }
@@ -959,7 +959,7 @@ nav a:hover::after {
 
     font-size: 35px;
 
-    color: var(--gold);
+    color: var(--velvet-6);
 }
 
 .care-grid h3 {
