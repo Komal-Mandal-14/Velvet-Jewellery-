@@ -1,14 +1,14 @@
 /* =========================================================
    VELVET JEWELLERY
-   LUXURY PURPLE VELVET THEME
+   RESPONSIVE LUXURY PURPLE THEME
    ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 
 
-/* =========================
-   COLORS
-   ========================= */
+/* =========================================================
+   VARIABLES
+   ========================================================= */
 
 :root {
     --velvet-1: #f0dff5;
@@ -26,9 +26,9 @@
 }
 
 
-/* =========================
+/* =========================================================
    RESET
-   ========================= */
+   ========================================================= */
 
 * {
     margin: 0;
@@ -38,23 +38,18 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
+    margin: 0;
+    padding: 0;
+
     font-family: "DM Sans", sans-serif;
+
     color: var(--text);
 
     background:
-        radial-gradient(
-            ellipse at 15% 20%,
-            rgba(255,255,255,.55) 0%,
-            transparent 28%
-        ),
-        radial-gradient(
-            ellipse at 85% 75%,
-            rgba(91,48,105,.30) 0%,
-            transparent 35%
-        ),
         linear-gradient(
             125deg,
             #f0dff5 0%,
@@ -64,53 +59,22 @@ body {
             #8f5da0 100%
         );
 
-    background-attachment: fixed;
-
     min-height: 100vh;
+
+    overflow-x: hidden;
 }
 
 
-/* =========================
-   VELVET TEXTURE
-   ========================= */
-
-body::before {
-    content: "";
-
-    position: fixed;
-
-    inset: 0;
-
-    pointer-events: none;
-
-    z-index: -1;
-
-    opacity: .18;
-
-    background:
-        repeating-linear-gradient(
-            110deg,
-            transparent 0px,
-            rgba(255,255,255,.35) 2px,
-            transparent 7px,
-            transparent 20px
-        );
-
-    mix-blend-mode: soft-light;
-}
-
-
-/* =========================
+/* =========================================================
    NAVBAR
-   ========================= */
+   ========================================================= */
 
 .navbar {
+    width: 100%;
     height: 80px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     padding: 0 6%;
@@ -129,47 +93,50 @@ body::before {
         0 5px 25px rgba(63,35,72,.15);
 
     position: sticky;
-
     top: 0;
 
     z-index: 1000;
 }
 
 
-/* =========================
+/* =========================================================
    LOGO
-   ========================= */
+   ========================================================= */
 
 .logo {
+    flex-shrink: 0;
+
     font-family: "Playfair Display", serif;
 
     font-size: 29px;
 
     letter-spacing: 7px;
 
-    color: #633C70;
+    color: #633c70;
 
-    text-shadow:
-        0 2px 10px rgba(53,27,62,.25);
+    white-space: nowrap;
 }
 
 
-/* =========================
+/* =========================================================
    NAVIGATION
-   ========================= */
+   ========================================================= */
 
 nav {
     display: flex;
+    align-items: center;
 
-    gap: 34px;
+    gap: 32px;
 }
 
 nav a {
-    text-decoration: none;
-
     color: #fffaff;
 
+    text-decoration: none;
+
     font-size: 14px;
+
+    white-space: nowrap;
 
     position: relative;
 
@@ -186,11 +153,9 @@ nav a::after {
     position: absolute;
 
     left: 0;
-
     bottom: -7px;
 
     width: 0;
-
     height: 1px;
 
     background: var(--gold);
@@ -203,16 +168,17 @@ nav a:hover::after {
 }
 
 
-/* =========================
+/* =========================================================
    NAV ICONS
-   ========================= */
+   ========================================================= */
 
 .nav-icons {
     display: flex;
-
     align-items: center;
 
-    gap: 15px;
+    gap: 14px;
+
+    flex-shrink: 0;
 }
 
 .nav-icons button {
@@ -241,38 +207,48 @@ nav a:hover::after {
    ========================================================= */
 
 .hero {
-    position: relative !important;
+    position: relative;
 
-    display: flex !important;
+    width: 100%;
 
-    width: 100% !important;
+    min-height: calc(100vh - 80px);
 
-    min-height: calc(100vh - 80px) !important;
+    display: flex;
+    align-items: center;
 
-    margin: 0 !important;
+    overflow: hidden;
 
-    padding: 0 !important;
-
-    overflow: hidden !important;
-
-    /*
-       IMPORTANT:
-       USE THE IMAGE DIRECTLY FROM THE SAME GITHUB
-       REPOSITORY.
-    */
-
-    background:
-        url("https://raw.githubusercontent.com/Komal-Mandal-14/Velvet-Jewellery-/main/Velvet-jewellery.png")
-        center center / cover
-        no-repeat !important;
-
-    background-color: #b985c9 !important;
+    background: #b985c9;
 }
 
 
-/* =========================
-   HERO IMAGE BACKUP
-   ========================= */
+/* =========================================================
+   HERO IMAGE
+   IMPORTANT:
+   IMAGE IS AN ACTUAL IMG, NOT CSS BACKGROUND
+   ========================================================= */
+
+.hero-bg-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    display: block;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   HERO IMAGE OVERLAY
+   ========================================================= */
 
 .hero::after {
     content: "";
@@ -281,55 +257,49 @@ nav a:hover::after {
 
     inset: 0;
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(250,238,252,.08) 0%,
-            rgba(250,238,252,0) 55%,
-            rgba(61,35,71,.04) 100%
-        );
+    z-index: 1;
 
     pointer-events: none;
 
-    z-index: 1;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(245,226,249,.78) 0%,
+            rgba(245,226,249,.55) 25%,
+            rgba(245,226,249,.12) 52%,
+            rgba(61,35,71,.04) 100%
+        );
 }
 
 
-/* =========================
+/* =========================================================
    HERO CONTENT
-   ========================= */
+   ========================================================= */
 
 .hero-content {
-    width: 55% !important;
+    position: relative;
 
-    min-height: calc(100vh - 80px) !important;
+    z-index: 2;
 
-    display: flex !important;
+    width: 55%;
 
-    flex-direction: column !important;
+    max-width: 700px;
 
-    justify-content: center !important;
+    padding-left: 8%;
 
-    padding: 0 0 0 8% !important;
+    padding-right: 20px;
 
-    position: relative !important;
+    display: flex;
 
-    z-index: 5 !important;
+    flex-direction: column;
+
+    justify-content: center;
 }
 
 
-/* =========================
-   REMOVE OLD HERO LIGHT
-   ========================= */
-
-.hero-content::before {
-    display: none !important;
-}
-
-
-/* =========================
+/* =========================================================
    SMALL TITLE
-   ========================= */
+   ========================================================= */
 
 .small-title {
     font-size: 12px;
@@ -338,65 +308,64 @@ nav a:hover::after {
 
     color: var(--velvet-5);
 
-    position: relative;
+    margin-bottom: 18px;
 }
 
 
-/* =========================
+/* =========================================================
    HERO HEADING
-   ========================= */
+   ========================================================= */
 
 .hero h1 {
-    font-family: "Playfair Display", serif !important;
+    font-family: "Playfair Display", serif;
 
-    font-size: clamp(55px, 5.5vw, 82px) !important;
+    font-size: clamp(48px, 5.5vw, 82px);
 
-    line-height: 1.02 !important;
+    line-height: 1.03;
 
-    font-weight: 500 !important;
+    font-weight: 500;
 
-    margin: 20px 0 !important;
+    color: var(--velvet-6);
 
-    color: var(--velvet-6) !important;
+    margin: 0 0 22px;
 
-    white-space: nowrap !important;
-
-    position: relative !important;
-
-    z-index: 6 !important;
+    max-width: 700px;
 }
 
 .hero h1 span {
-    font-style: italic !important;
+    font-style: italic;
 
-    color: var(--velvet-5) !important;
+    color: var(--velvet-5);
 }
 
 
-/* =========================
+/* =========================================================
    HERO TEXT
-   ========================= */
+   ========================================================= */
 
 .hero-text {
-    max-width: 470px !important;
+    max-width: 460px;
 
-    color: var(--soft-text) !important;
+    color: var(--soft-text);
 
-    line-height: 1.8 !important;
+    line-height: 1.8;
 
-    margin-bottom: 30px !important;
+    font-size: 15px;
 
-    position: relative !important;
-
-    z-index: 6 !important;
+    margin-bottom: 30px;
 }
 
 
-/* =========================
-   BUTTON
-   ========================= */
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
 
 .primary-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
     width: fit-content;
 
     padding: 16px 30px;
@@ -423,10 +392,6 @@ nav a:hover::after {
         0 12px 30px rgba(65,35,75,.3);
 
     transition: .3s ease;
-
-    position: relative;
-
-    z-index: 6;
 }
 
 .primary-btn:hover {
@@ -437,22 +402,9 @@ nav a:hover::after {
 }
 
 
-/* =========================
-   OLD HERO IMAGE
-   ========================= */
-
-.hero-image {
-    display: none !important;
-}
-
-.image-placeholder {
-    display: none !important;
-}
-
-
-/* =========================
+/* =========================================================
    FEATURES
-   ========================= */
+   ========================================================= */
 
 .features {
     display: grid;
@@ -482,6 +434,10 @@ nav a:hover::after {
     transition: .3s ease;
 }
 
+.feature:last-child {
+    border-right: none;
+}
+
 .feature:hover {
     background: rgba(255,255,255,.12);
 }
@@ -489,7 +445,7 @@ nav a:hover::after {
 .feature-icon {
     font-size: 25px;
 
-    color: #633C70;
+    color: #633c70;
 
     margin-bottom: 12px;
 }
@@ -509,9 +465,9 @@ nav a:hover::after {
 }
 
 
-/* =========================
+/* =========================================================
    SECTION HEADINGS
-   ========================= */
+   ========================================================= */
 
 .section-heading {
     text-align: center;
@@ -540,9 +496,9 @@ nav a:hover::after {
 }
 
 
-/* =========================
+/* =========================================================
    COLLECTIONS
-   ========================= */
+   ========================================================= */
 
 .collections {
     padding: 100px 6%;
@@ -564,7 +520,7 @@ nav a:hover::after {
 .collection-grid {
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 
     gap: 24px;
 
@@ -572,8 +528,6 @@ nav a:hover::after {
 }
 
 .collection-card {
-    width: 100%;
-
     min-width: 0;
 
     text-align: center;
@@ -602,77 +556,17 @@ nav a:hover::after {
 
 .collection-image img {
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
 
     display: block;
+
+    transition: transform .5s ease;
 }
 
-
-/* =========================
-   COLLECTION SHADES
-   ========================= */
-
-.necklace {
-    background:
-        radial-gradient(
-            ellipse at 20% 15%,
-            rgba(255,255,255,.5),
-            transparent 30%
-        ),
-        linear-gradient(
-            145deg,
-            #e4c9eb,
-            #bd8acb 50%,
-            #80518f
-        );
-}
-
-.earrings {
-    background:
-        radial-gradient(
-            ellipse at 80% 20%,
-            rgba(255,255,255,.45),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #c99ad5,
-            #a46db2 55%,
-            #70427d
-        );
-}
-
-.rings {
-    background:
-        radial-gradient(
-            ellipse at 25% 30%,
-            rgba(255,255,255,.55),
-            transparent 25%
-        ),
-        linear-gradient(
-            145deg,
-            #ecd9f1,
-            #c49bce 50%,
-            #95629f
-        );
-}
-
-.bracelets {
-    background:
-        radial-gradient(
-            ellipse at 75% 20%,
-            rgba(255,255,255,.4),
-            transparent 25%
-        ),
-        linear-gradient(
-            140deg,
-            #b980c5,
-            #8d589c 50%,
-            #593364
-        );
+.collection-card:hover .collection-image img {
+    transform: scale(1.05);
 }
 
 .collection-card h3 {
@@ -696,9 +590,9 @@ nav a:hover::after {
 }
 
 
-/* =========================
+/* =========================================================
    PRODUCTS
-   ========================= */
+   ========================================================= */
 
 .products {
     padding: 100px 6%;
@@ -721,12 +615,14 @@ nav a:hover::after {
 .product-grid {
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 
     gap: 20px;
 }
 
 .product-card {
+    min-width: 0;
+
     background:
         linear-gradient(
             145deg,
@@ -752,7 +648,6 @@ nav a:hover::after {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     position: relative;
@@ -783,15 +678,14 @@ nav a:hover::after {
 }
 
 
-/* =========================
+/* =========================================================
    BADGE
-   ========================= */
+   ========================================================= */
 
 .badge {
     position: absolute;
 
     top: 15px;
-
     left: 15px;
 
     padding: 7px 11px;
@@ -806,19 +700,17 @@ nav a:hover::after {
 }
 
 
-/* =========================
+/* =========================================================
    WISHLIST
-   ========================= */
+   ========================================================= */
 
 .wishlist {
     position: absolute;
 
     top: 15px;
-
     right: 15px;
 
     width: 38px;
-
     height: 38px;
 
     border-radius: 50%;
@@ -843,9 +735,9 @@ nav a:hover::after {
 }
 
 
-/* =========================
+/* =========================================================
    PRODUCT INFO
-   ========================= */
+   ========================================================= */
 
 .product-info {
     padding: 20px;
@@ -873,6 +765,8 @@ nav a:hover::after {
     justify-content: space-between;
 
     align-items: center;
+
+    gap: 10px;
 }
 
 .price-row span {
@@ -902,9 +796,9 @@ nav a:hover::after {
 }
 
 
-/* =========================
+/* =========================================================
    STORY
-   ========================= */
+   ========================================================= */
 
 .story {
     display: grid;
@@ -923,10 +817,11 @@ nav a:hover::after {
 }
 
 .story-image {
+    min-height: 500px;
+
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     background:
@@ -987,9 +882,40 @@ nav a:hover::after {
 }
 
 
-/* =========================
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
+
+.secondary-btn {
+    width: fit-content;
+
+    padding: 14px 24px;
+
+    background: transparent;
+
+    border: 1px solid var(--velvet-5);
+
+    color: var(--velvet-5);
+
+    cursor: pointer;
+
+    letter-spacing: 1.5px;
+
+    font-size: 11px;
+
+    transition: .3s ease;
+}
+
+.secondary-btn:hover {
+    background: var(--velvet-5);
+
+    color: white;
+}
+
+
+/* =========================================================
    CARE GUIDE
-   ========================= */
+   ========================================================= */
 
 .care {
     padding: 100px 6%;
@@ -1011,7 +937,7 @@ nav a:hover::after {
 .care-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     gap: 30px;
 
@@ -1051,9 +977,9 @@ nav a:hover::after {
 }
 
 
-/* =========================
+/* =========================================================
    NEWSLETTER
-   ========================= */
+   ========================================================= */
 
 .newsletter {
     text-align: center;
@@ -1084,10 +1010,50 @@ nav a:hover::after {
     color: var(--velvet-6);
 }
 
+.newsletter-form {
+    display: flex;
 
-/* =========================
+    justify-content: center;
+
+    max-width: 550px;
+
+    margin: 30px auto 0;
+}
+
+.newsletter-form input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 15px 18px;
+
+    border: 1px solid rgba(99,60,112,.35);
+
+    outline: none;
+
+    font-family: inherit;
+
+    background: rgba(255,255,255,.7);
+}
+
+.newsletter-form button {
+    padding: 15px 22px;
+
+    border: none;
+
+    background: var(--velvet-6);
+
+    color: white;
+
+    cursor: pointer;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
    FOOTER
-   ========================= */
+   ========================================================= */
 
 footer {
     padding: 70px 6%;
@@ -1146,9 +1112,9 @@ footer a:hover {
 }
 
 
-/* =========================
+/* =========================================================
    CART
-   ========================= */
+   ========================================================= */
 
 .cart-overlay {
     position: fixed;
@@ -1164,6 +1130,8 @@ footer a:hover {
 
 .cart {
     width: 400px;
+
+    max-width: 100%;
 
     height: 100%;
 
@@ -1185,9 +1153,9 @@ footer a:hover {
 }
 
 
-/* =========================
+/* =========================================================
    SCROLLBAR
-   ========================= */
+   ========================================================= */
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -1208,9 +1176,9 @@ footer a:hover {
 }
 
 
-/* =========================
+/* =========================================================
    COLLECTION HEADER
-   ========================= */
+   ========================================================= */
 
 .collection-header {
     text-align: center;
@@ -1260,9 +1228,9 @@ footer a:hover {
 }
 
 
-/* =========================
+/* =========================================================
    COLLECTION PRODUCT BACKGROUNDS
-   ========================= */
+   ========================================================= */
 
 .necklace-product {
     background:
@@ -1325,158 +1293,459 @@ footer a:hover {
 }
 
 
-/* =========================
+/* =========================================================
    TABLET
-   ========================= */
+   ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
+
+    nav {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero-content {
+        width: 58%;
+        padding-left: 6%;
+    }
+
+    .collection-grid,
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .care-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        height: 72px;
+
+        padding: 0 25px;
+    }
 
     nav {
         display: none;
     }
 
-    .hero-content {
-        width: 70% !important;
+    .hero {
+        min-height: calc(100svh - 72px);
+    }
 
-        padding-left: 7% !important;
+    .hero-content {
+        width: 65%;
+
+        padding-left: 7%;
     }
 
     .hero h1 {
-        white-space: normal !important;
-
-        font-size: 55px !important;
+        font-size: clamp(46px, 7vw, 65px);
     }
 
     .features {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .collection-grid,
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .story {
+        grid-template-columns: 1fr;
     }
 
-    .care-grid {
-        grid-template-columns: 1fr;
+    .story-image {
+        min-height: 400px;
     }
 
     footer {
         grid-template-columns: 1fr 1fr;
     }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* -------------------------
+       NAVBAR
+       ------------------------- */
+
+    .navbar {
+        height: 68px;
+
+        padding: 0 16px;
+    }
+
+    .logo {
+        font-size: 20px;
+
+        letter-spacing: 4px;
+    }
+
+    .nav-icons {
+        gap: 7px;
+    }
+
+    .nav-icons button {
+        font-size: 17px;
+    }
+
+
+    /* -------------------------
+       HERO
+       ------------------------- */
+
+    .hero {
+        min-height: calc(100svh - 68px);
+
+        height: calc(100svh - 68px);
+
+        display: flex;
+
+        align-items: center;
+
+        overflow: hidden;
+    }
+
+
+    /*
+       IMPORTANT MOBILE FIX
+
+       Landscape image ko stretch nahi karenge.
+       Image poori screen cover karegi.
+
+       Text ke peeche readable area maintain
+       karne ke liye image ka position right-center.
+    */
+
+    .hero-bg-image {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        object-position: 68% center;
+
+        display: block;
+    }
+
+
+    /*
+       Mobile overlay thoda stronger
+       so text clearly visible.
+    */
+
+    .hero::after {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(245,226,249,.92) 0%,
+                rgba(245,226,249,.76) 42%,
+                rgba(245,226,249,.25) 72%,
+                rgba(61,35,71,.03) 100%
+            );
+    }
+
+
+    /* -------------------------
+       HERO CONTENT
+       ------------------------- */
+
+    .hero-content {
+        width: 100%;
+
+        max-width: none;
+
+        padding:
+            35px
+            22px
+            35px
+            22px;
+
+        justify-content: center;
+    }
+
+    .small-title {
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+
+        margin-bottom: 13px;
+    }
+
+    .hero h1 {
+        font-size: clamp(39px, 11vw, 52px);
+
+        line-height: 1.05;
+
+        margin-bottom: 17px;
+
+        max-width: 330px;
+    }
+
+    .hero-text {
+        max-width: 300px;
+
+        font-size: 13px;
+
+        line-height: 1.65;
+
+        margin-bottom: 23px;
+    }
+
+    .primary-btn {
+        padding: 14px 21px;
+
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    /* -------------------------
+       FEATURES
+       ------------------------- */
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .feature {
+        padding: 30px 12px;
+    }
+
+    .feature-icon {
+        font-size: 21px;
+
+        margin-bottom: 8px;
+    }
+
+    .feature h3 {
+        font-size: 16px;
+    }
+
+    .feature p {
+        font-size: 11px;
+
+        line-height: 1.5;
+    }
+
+
+    /* -------------------------
+       COLLECTIONS
+       ------------------------- */
+
+    .collections,
+    .products,
+    .care {
+        padding: 65px 18px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading p {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+
+        line-height: 1.15;
+    }
+
+    .collection-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .collection-image {
+        height: 390px;
+    }
+
+
+    /* -------------------------
+       PRODUCTS
+       ------------------------- */
+
+    .product-image {
+        height: 390px;
+    }
+
+    .product-info {
+        padding: 18px;
+    }
+
+
+    /* -------------------------
+       STORY
+       ------------------------- */
 
     .story {
         grid-template-columns: 1fr;
     }
 
-    .hero-image {
-        display: none !important;
-    }
-}
-
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 600px) {
-
-    .navbar {
-        padding: 0 20px;
+    .story-image {
+        min-height: 320px;
     }
 
-    .logo {
-        font-size: 22px;
+    .story-placeholder {
+        font-size: 42px;
+
+        letter-spacing: 5px;
     }
 
-    .hero {
-        min-height: calc(100vh - 80px) !important;
-
-        background-position: center center !important;
-
-        background-size: cover !important;
+    .story-content {
+        padding: 65px 22px;
     }
 
-    .hero-content {
-        width: 90% !important;
+    .story-content h2 {
+        font-size: 40px;
 
-        min-height: calc(100vh - 80px) !important;
-
-        padding-left: 7% !important;
+        line-height: 1.1;
     }
 
-    .hero h1 {
-        font-size: 45px !important;
+    .story-content p {
+        font-size: 14px;
 
-        white-space: normal !important;
+        line-height: 1.7;
     }
 
-    .features,
-    .collection-grid,
-    .product-grid {
+
+    /* -------------------------
+       CARE
+       ------------------------- */
+
+    .care-grid {
         grid-template-columns: 1fr;
+
+        gap: 18px;
     }
 
-    .collections,
-    .products,
-    .care {
-        padding: 70px 5%;
+    .care-grid > div {
+        padding: 28px 20px;
     }
 
-    .collection-image {
-        height: 350px;
+
+    /* -------------------------
+       NEWSLETTER
+       ------------------------- */
+
+    .newsletter {
+        padding: 70px 18px;
     }
 
-    .section-heading h2,
-    .story-content h2,
     .newsletter h2 {
         font-size: 40px;
     }
 
-    .story-content {
-        padding: 15% 8%;
+    .newsletter-form {
+        flex-direction: column;
+
+        gap: 10px;
     }
 
-    footer {
-        grid-template-columns: 1fr;
-    }
-
-    .cart {
+    .newsletter-form input,
+    .newsletter-form button {
         width: 100%;
     }
 
+
+    /* -------------------------
+       FOOTER
+       ------------------------- */
+
+    footer {
+        grid-template-columns: 1fr;
+
+        padding: 55px 22px;
+
+        gap: 30px;
+    }
+
+
+    /* -------------------------
+       CART
+       ------------------------- */
+
+    .cart {
+        width: 100%;
+
+        padding: 25px 20px;
+    }
+
+
+    /* -------------------------
+       COLLECTION PAGE
+       ------------------------- */
+
+    .collection-header {
+        padding: 65px 18px 50px;
+    }
+
     .collection-header h1 {
-        font-size: 45px;
+        font-size: 44px;
+
+        line-height: 1.1;
+    }
+
+    .collection-header span {
+        font-size: 13px;
     }
 }
 
 
 /* =========================================================
-   FINAL HERO OVERRIDE
-   DO NOT DELETE THIS PART
+   VERY SMALL PHONES
    ========================================================= */
 
-section.hero#home {
-    background:
-        url("https://raw.githubusercontent.com/Komal-Mandal-14/Velvet-Jewellery-/main/Velvet-jewellery.png")
-        center center / cover
-        no-repeat !important;
+@media (max-width: 380px) {
 
-    background-color: #b985c9 !important;
+    .logo {
+        font-size: 18px;
 
-    background-image:
-        url("https://raw.githubusercontent.com/Komal-Mandal-14/Velvet-Jewellery-/main/Velvet-jewellery.png") !important;
+        letter-spacing: 3px;
+    }
 
-    background-size: cover !important;
+    .nav-icons {
+        gap: 4px;
+    }
 
-    background-position: center center !important;
+    .nav-icons button {
+        font-size: 15px;
+    }
 
-    background-repeat: no-repeat !important;
-}
+    .hero-content {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
 
-section.hero#home .hero-image {
-    display: none !important;
-}
+    .hero h1 {
+        font-size: 37px;
+    }
 
-section.hero#home .hero-content::before {
-    display: none !important;
+    .hero-text {
+        font-size: 12px;
+    }
+
+    .collection-image,
+    .product-image {
+        height: 340px;
+    }
 }
