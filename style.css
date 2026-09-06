@@ -159,7 +159,7 @@ nav a::after {
     width: 0;
     height: 1px;
 
-    background: var(--gold);
+    background: var(#3d2347);
 
     transition: .3s ease;
 }
